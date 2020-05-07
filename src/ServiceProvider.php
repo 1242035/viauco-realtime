@@ -18,23 +18,21 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         $this->loadRoute();
         $this->publish();
+        $this->commands([
+            \BeyondCode\LaravelWebSockets\Console\StartWebSocketServer::class,
+            \BeyondCode\LaravelWebSockets\Console\CleanStatistics::class,
+        ]);
     }
     
     public function register()
     {
-       
         parent::register();
-
         $this->registerSocket();
-    
     }
 
     protected function registerSocket()
     {
         $this->app->register(\BeyondCode\LaravelWebSockets\WebSocketsServiceProvider::class);
-        $this->app->singleton('websockets.router', function () {
-            return new \BeyondCode\LaravelWebSockets\Server\Router();
-        });
     }
 
     private function loadRoute()
