@@ -1,3 +1,3 @@
 Artisan commands
 To publish the config file, run this command:
-php artisan vendor:publish --provider="Viauco\Messenger\MessengerServiceProvider"
+php artisan vendor:publish --provider="Viauco\Realtime\ServiceProvider"
