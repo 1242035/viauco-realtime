@@ -1,0 +1,43 @@
+{
+    "name": "viauco/realtime",
+    "description": "Simple notification system",
+    "keywords":    [
+        "laravel", "lumen", "notification"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php":               ">=7.1.3",
+        "beyondcode/laravel-websockets": "*",
+        "illuminate/support": "*",
+        "illuminate/contracts": "*",
+        "illuminate/broadcasting": "*",
+        "illuminate/database": "*",
+        "illuminate/events": "*",
+        "illuminate/notifications": "*",
+        "illuminate/queue": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "*",
+        "mockery/mockery":     "*",
+        "phpunit/phpunit":     "*",
+        "phpunit/phpcov":      "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Viauco\\Realtime\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Viauco\\Realtime\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Viauco\\Realtime\\ServiceProvider"
+            ]
+        }
+    }
+}
