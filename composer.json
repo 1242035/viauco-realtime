@@ -16,6 +16,7 @@
         "illuminate/database": "*",
         "illuminate/events": "*",
         "illuminate/notifications": "*",
+        "illuminate/routing": "*",
         "illuminate/queue": "*"
     },
     "require-dev": {

@@ -18,6 +18,10 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         $this->loadRoute();
         $this->publish();
+        $this->commands([
+            \BeyondCode\LaravelWebSockets\Console\StartWebSocketServer::class,
+            \BeyondCode\LaravelWebSockets\Console\CleanStatistics::class,
+        ]);
     }
     
     private function loadRoute()
