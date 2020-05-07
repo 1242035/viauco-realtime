@@ -1,5 +1,6 @@
 {
     "name": "viauco/realtime",
+    "version": "1.0",
     "description": "Simple notification system",
     "keywords":    [
         "laravel", "lumen", "notification"
